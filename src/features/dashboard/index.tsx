@@ -13,11 +13,7 @@ import AirPolutionDataList from "./components/AirPolutionDataList";
 import { AirPolutionSchema } from "./schema/AirPolutionSchema";
 import { CreateAirPolutionButton } from "./components/AddAirPolutionData";
 
-interface AirPolutionDataDetailPageProps {
-  id: number;
-}
-
-const DashboardPage: FC<AirPolutionDataDetailPageProps> = ({ id }) => {
+const DashboardPage = () => {
   const session = useSession();
 
   return (
@@ -65,7 +61,7 @@ const DashboardPage: FC<AirPolutionDataDetailPageProps> = ({ id }) => {
       </section>
       <section className="max-w-7xl mx-auto py-10">
         <CreateAirPolutionButton />
-        <AirPolutionDataList id={id} />
+        <AirPolutionDataList />
       </section>
     </div>
   );

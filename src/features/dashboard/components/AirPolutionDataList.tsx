@@ -13,11 +13,7 @@ import { FC, useState } from "react";
 import { UpdateAirPolutionButton } from "./UpdateAirPolution";
 import Pagination from "@/components/Pagination";
 
-interface AirPolutionDataPageProps {
-  id: number;
-}
-
-const AirPolutionDataList: FC<AirPolutionDataPageProps> = ({ id }) => {
+const AirPolutionDataList = () => {
   const [page, setPage] = useState(1);
   const { data, isPending } = useGetAirPolutions({
     page,
